@@ -1,6 +1,6 @@
 import { Icon, Icons } from "@/components/ui/Icons";
 import { authOptions } from "@/lib/auth";
-import { Link } from "lucide-react";
+import  Link  from "next/link";
 import { getServerSession } from "next-auth";
 import { notFound } from "next/navigation";
 import { FC, ReactNode } from "react";
