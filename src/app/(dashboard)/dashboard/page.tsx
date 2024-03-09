@@ -22,7 +22,6 @@ const page = async ({}) => {
         -1,
         -1
       )) as string[]
-      console.log('lastMessageRaw:', lastMessageRaw);
       // Parse lastMessageRaw only if it is not null
       const lastMessage = lastMessageRaw ? JSON.parse(lastMessageRaw) as Message : null;
 
