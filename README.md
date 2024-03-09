@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript. [Learn more](https://www.typescriptlang.org/)
+- **Next.js**: A React framework for building server-side rendered (SSR) and statically generated (SSG) web applications. [Learn more](https://nextjs.org/)
+- **React**: A JavaScript library for building user interfaces. [Learn more](https://reactjs.org/)
+- **Tailwind CSS**: A utility-first CSS framework for quickly styling web applications. [Learn more](https://tailwindcss.com/)
+- **React Hot Toast**: A toast notification library for React applications. [Learn more](https://react-hot-toast.com/)
+- **ESLint**: A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. [Learn more](https://eslint.org/)
+- **Vercel:** A cloud platform for static sites and serverless functions, used for hosting the project. [Learn more](https://vercel.com/)
+- **GitHub:** Repository hosting and version control. [Learn more](https://github.com/)
+- **Git:** Version control. [Learn more](https://git-scm.com/)
+- **Headlessui/react**: A library for building accessible components in React. [Learn more](https://headlessui.dev/)
+- **Hookform/resolvers**: Resolvers for React Hook Form. [Learn more](https://react-hook-form.com/api/useform/resolver)
+- **Next-auth/upstash-redis-adapter**: Adapter for using Upstash Redis with NextAuth. [Learn more](https://github.com/upstash/next-auth/tree/main/packages/upstash-redis-adapter)
+- **Tailwindcss/forms**: Tailwind CSS plugin for styling form elements. [Learn more](https://tailwindcss.com/docs/plugins#forms)
+- **Upstash/redis**: Redis client for Node.js. [Learn more](https://www.npmjs.com/package/@upstash/redis)
+- **Axios**: Promise-based HTTP client for the browser and Node.js. [Learn more](https://axios-http.com/)
+- **Class-variance-authority**: Library for class variance authority. [Learn more](https://www.npmjs.com/package/class-variance-authority)
+- **Clsx**: A utility for constructing className strings conditionally. [Learn more](https://www.npmjs.com/package/clsx)
+- **Date-fns**: Date utility library. [Learn more](https://date-fns.org/)
+- **Encoding**: Solution for creating and parsing everything from binary to ASCII and Unicode. [Learn more](https://www.npmjs.com/package/encoding)
+- **Lucide-react**: Icons for React. [Learn more](https://lucide.dev/)
+- **Nanoid**: A secure URL-friendly unique string ID generator for JavaScript. [Learn more](https://www.npmjs.com/package/nanoid)
+- **Next-auth**: Authentication for Next.js applications. [Learn more](https://next-auth.js.org/)
+- **Pusher**: A Node.js client for Pusher Channels. [Learn more](https://pusher.com/)
+- **Pusher-js**: JavaScript library for Pusher Channels. [Learn more](https://github.com/pusher/pusher-js)
+- **React-hook-form**: For forms with easy-to-use validation. [Learn more](https://react-hook-form.com/)
+- **React-loading-skeleton**: Creates loading placeholders for the project. [Learn more](https://www.npmjs.com/package/react-loading-skeleton)
+- **React-textarea-autosize**: Textarea component for React which grows with content. [Learn more](https://www.npmjs.com/package/react-textarea-autosize)
+- **Tailwind-merge**: Merge Tailwind CSS classes together. [Learn more](https://github.com/saadeghi/tailwindcss-merge)
+- **Zod**: TypeScript-first schema declaration and validation library. [Learn more](https://github.com/colinhacks/zod)
+- **Google OAuth API**: Google's OAuth service for authentication and authorization. [Learn more](https://developers.google.com/identity/protocols/oauth2)
