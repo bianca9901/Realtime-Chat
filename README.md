@@ -1,4 +1,137 @@
+## Note
 
+This application uses Google OAuth for authentication. Due to the nature of this authentication mechanism, only users with email addresses I manually add to the authentication configuration can access the application. Therefore, a deployed version of the application is not provided.
+
+However, you can still run the application locally for development purposes. Follow the steps below to set it up. Note that if you plan to deploy the application yourself, you will need to configure Google OAuth accordingly.
+
+## How To Use
+
+Follow these steps to get started with the project:
+
+### **1. Clone the Repository**
+
+First, clone the repository to your local machine using the following command:
+
+```
+git clone https://github.com/bianca9901/Realtime-Chat.git
+
+```
+
+### **2. Install Dependencies**
+
+Navigate into the project directory and install the dependencies using npm or yarn:
+
+```
+cd realtime-chat-app
+
+```
+
+```
+npm install
+
+```
+
+or
+
+```
+yarn install
+```
+
+### **3. Set Up Accounts and Get keys for Your Environment variables**
+
+**First, you will need an account on Google, Upstash and Pusher. I will guide you through the next steps:**
+
+In **Google Console**, follow these steps:
+
+**
+1. Sign in to the Google Cloud Console.
+   
+2. Create a new project and navigate to your project's APIs & Services
+
+3. In the "OAuth consent screen" tab, add your App domain:
+This is the domain where your application is hosted. Google only allows apps using OAuth to use authorized domains for security reasons.
+
+4. In the "Test users" section, add at least two users:
+This is to ensure you can test your application with different user accounts.
+
+5. Navigate to the credentials tab.
+   
+6. Choose the appropriate user type:
+If you select "External", you'll need to manually add the users who can access your app. Alternatively, you can choose "Internal" if you prefer.
+   
+9. Add the Authorized JavaScript origins:
+This should include http://localhost:3000 for requests from a browser.
+
+11. Add the Authorized redirect URIs:
+For requests from a web server, include http://localhost:3000/api/auth/callback/google.
+
+13. Copy your Client ID and Client Secret:
+Finally, on the left side of the screen, you'll find your Client ID and Client Secret. Copy these credentials for later use in your application.
+
+**
+
+
+On **Upstash**, follow these steps:
+
+--
+
+On **Pusher**, follow these steps:
+
+--
+
+**Environment Variables**
+
+Create `.env.local` File In The Root Directory Of Your Project:
+
+```
+cd realtime-chat-app
+```
+
+```
+touch .env.local
+```
+
+**Add all your secrets next to these variables:**
+
+```
+UPSTASH_REDIS_REST_URL= // URL for accessing the Upstash Redis database.
+
+UPSTASH_REDIS_REST_TOKEN= // Token for authentication with the Upstash Redis database.
+
+GOOGLE_CLIENT_ID= // Client ID obtained from the Google Developer Console for OAuth authentication.
+
+GOOGLE_CLIENT_SECRET= // Client secret obtained from the Google Developer Console for OAuth authentication.
+
+NEXTAUTH_SECRET= // Secret used by NextAuth.js for session encryption (choose your own secret password).
+
+PUSHER_APP_ID= //  ID of your Pusher application.
+
+NEXT_PUBLIC_PUSHER_APP_KEY= // Public key of your Pusher application.
+
+PUSHER_APP_SECRET= //  Secret key of your Pusher application.
+```
+
+### **4. Start the Development Server**
+
+Once the dependencies are installed and environment variables are set up, you can start the development server:
+
+```
+npm run dev
+
+```
+
+or
+
+```
+yarn dev
+
+```
+
+This command will start the development server and your project will be accessible at **`http://localhost:3000`** by default.
+
+### **5. Explore and Enjoy!**
+
+You're all set! explore the project, interact with its features, and enjoy using it. If you encounter any issues or have feedback, feel free to open an issue on GitHub.
 
 ## Technologies Used
 
