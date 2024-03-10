@@ -9,17 +9,17 @@ https://github.com/bianca9901/Realtime-Chat/assets/134193140/88390ca4-7700-4b4d-
 
 **Instant real-time functionality:** powered by Upstash Redis, for immediate updates and interactions within the application.
 
-**Real-time chat and friend requests:** powered by Pusher for used for efficient social interactions.
+**Real-time chat and friend requests:** powered by Pusher, used for efficient social interactions.
 
-**Comprehensive friend system** enabling users to manage friend requests (add, accept, or deny).
+**Database queries:** powered by Redis, used for super fast performance.
 
-**Database queries** powered by Redis, optimizing performance.
+**User authentication:** through integration with Google Authentication.
 
-**Responsive user interface** designed with Tailwind CSS for consistent experiences across various devices.
+**Comprehensive friend system:** enabling users to manage friend requests (add, accept, or deny).
 
-**Route protection** mechanisms to secure sensitive application areas.
+**Responsive user interface:** designed with Tailwind CSS for consistent experiences across various devices.
 
-**User authentication** through integration with Google Authentication.
+**Route protection:** mechanisms to secure sensitive application areas.
 
 ## Note
 
