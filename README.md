@@ -1,10 +1,10 @@
 ## Note
 
-This application uses Google OAuth for authentication. Due to the nature of this authentication mechanism, only users with email addresses I manually add to the authentication configuration can access the application. Therefore, a deployed version of the application is not provided.
+This application uses Google OAuth for authentication. Due to the nature of this authentication mechanism, only users with email addresses I manually add to the authentication configuration can use the features of the application. Therefore, a deployed version of the application is not provided.
 
 However, you can still run the application locally for development purposes. Follow the steps below to set it up. Note that if you plan to deploy the application yourself, you will need to configure Google OAuth accordingly.
 
-## How To Use
+## How To Use In Local Development
 
 Follow these steps to get started with the project:
 
@@ -37,47 +37,47 @@ or
 yarn install
 ```
 
-### **3. Set Up Accounts and Get keys for Your Environment variables**
+### **3. Set up Accounts and get keys for your Environment Variables**
 
 **First, you will need an account on Google, Upstash and Pusher. I will guide you through the next steps:**
 
-In **Google Console**, follow these steps:
 
-**
-1. Sign in to the Google Cloud Console.
-   
-2. Create a new project and navigate to your project's APIs & Services
+On **Google Console**, follow these steps:
 
-3. In the "OAuth consent screen" tab, add your App domain:
-This is the domain where your application is hosted. Google only allows apps using OAuth to use authorized domains for security reasons.
-
-4. In the "Test users" section, add at least two users:
-This is to ensure you can test your application with different user accounts.
-
-5. Navigate to the credentials tab.
-   
-6. Choose the appropriate user type:
-If you select "External", you'll need to manually add the users who can access your app. Alternatively, you can choose "Internal" if you prefer.
-   
-9. Add the Authorized JavaScript origins:
-This should include http://localhost:3000 for requests from a browser.
-
-11. Add the Authorized redirect URIs:
-For requests from a web server, include http://localhost:3000/api/auth/callback/google.
-
-13. Copy your Client ID and Client Secret:
-Finally, on the left side of the screen, you'll find your Client ID and Client Secret. Copy these credentials for later use in your application.
-
-**
+1. Sign in to [Google Cloud Console.](https://console.cloud.google.com/)
+2. Click the "Select new Project" button and then select "Create a new project."
+3. Name your project.
+4. Click on the hamburger menu on the left and navigate to APIs & Services.
+5. Click on the "OAuth consent screen" tab within the hamburger menu, and choose "External." Once selected, click on the "Create" button.
+6. Provide a name for your app and your email in the App Information section.
+7. Scroll down to the App domain, and in the Application homepage text field, add http://localhost:3000
+8. Scroll further down to the Developer contact information and add your email address.
+9. Click on "Save and Continue."
+10. In the Scopes section, you can scroll to the bottom without filling in anything and click on "Save and Continue."
+11. In the Test users section, you will need to add at least two Google accounts so that you can later test the features of the Realtime-Chat-App. Then, click on "Save and Continue."
+12. Next, navigate to the "Credentials" section within the hamburger menu on the left. Click on "Create Credentials."
+13. From the dropdown menu, select "OAuth client ID."
+14. In the Application type dropdown, select "Web Application."
+15. In the Authorized JavaScript origins section, add http://localhost:3000
+16. In the Authorized redirect URIs section, add http://localhost:3000/api/auth/callback/google
+17. Click on "Create," and then in the popup, you will see your Client ID and Client secret. Make sure to save these keys somewhere safe.
 
 
 On **Upstash**, follow these steps:
 
---
+1. Sign in to [Upstash.](https://upstash.com/)
+2. Click on "Create database," select a name, choose your closest region, and then click "Create."
+3. In the "Details" tab, scroll down to the REST API section, and copy your UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN. Ensure to save them somewhere safe.
+
 
 On **Pusher**, follow these steps:
 
---
+1. Sign in to [Pusher.](https://pusher.com/)
+2. Click on the "Get started" button inside the Channels box.
+3. Name your app, select a cluster, and then click the "Create app" button.
+4. In the menu on the left, navigate to "App keys," and copy all the keys (app_id, key, secret) you dont need to copy the cluster.
+5. In the realtime-chat-app, navigate to src/lib/pusher.ts, and change the two clusters from "eu" to your region if you have a different region than I. Otherwise, you can skip this step.
+
 
 **Environment Variables**
 
@@ -94,21 +94,21 @@ touch .env.local
 **Add all your secrets next to these variables:**
 
 ```
-UPSTASH_REDIS_REST_URL= // URL for accessing the Upstash Redis database.
+GOOGLE_CLIENT_ID= // Place the Client ID from Google Developer Console.
 
-UPSTASH_REDIS_REST_TOKEN= // Token for authentication with the Upstash Redis database.
+GOOGLE_CLIENT_SECRET= // Place the Client secret from Google Developer Console.
 
-GOOGLE_CLIENT_ID= // Client ID obtained from the Google Developer Console for OAuth authentication.
+UPSTASH_REDIS_REST_URL= // Place the URL from Upstash Redis database.
 
-GOOGLE_CLIENT_SECRET= // Client secret obtained from the Google Developer Console for OAuth authentication.
+UPSTASH_REDIS_REST_TOKEN= // Place the Token from Upstash Redis database.
+
+PUSHER_APP_ID= //  Place the "app_id" from Pusher.
+
+NEXT_PUBLIC_PUSHER_APP_KEY= // Place the "key" from Pusher.
+
+PUSHER_APP_SECRET= //  Place the "secret" from Pusher.
 
 NEXTAUTH_SECRET= // Secret used by NextAuth.js for session encryption (choose your own secret password).
-
-PUSHER_APP_ID= //  ID of your Pusher application.
-
-NEXT_PUBLIC_PUSHER_APP_KEY= // Public key of your Pusher application.
-
-PUSHER_APP_SECRET= //  Secret key of your Pusher application.
 ```
 
 ### **4. Start the Development Server**
