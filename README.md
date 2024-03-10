@@ -1,5 +1,10 @@
 # Realtime-Chat
 
+
+https://github.com/bianca9901/Realtime-Chat/assets/134193140/88390ca4-7700-4b4d-975e-c142d6e7b5f5
+
+
+
 ## Features
 
 **Instant real-time functionality:** powered by Upstash Redis, for immediate updates and interactions within the application.
