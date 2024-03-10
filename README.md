@@ -1,3 +1,21 @@
+# Realtime-Chat
+
+## Features
+
+**Instant real-time functionality:** powered by Upstash Redis, for immediate updates and interactions within the application.
+
+**Real-time chat and friend requests:** powered by Pusher for used for efficient social interactions.
+
+**Comprehensive friend system** enabling users to manage friend requests (add, accept, or deny).
+
+**Database queries** powered by Redis, optimizing performance.
+
+**Responsive user interface** designed with Tailwind CSS for consistent experiences across various devices.
+
+**Route protection** mechanisms to secure sensitive application areas.
+
+**User authentication** through integration with Google Authentication.
+
 ## Note
 
 This application uses Google OAuth for authentication. Due to the nature of this authentication mechanism, only users with email addresses I manually add to the authentication configuration can use the features of the application. Therefore, a deployed version of the application is not provided.
